@@ -11,7 +11,13 @@ class Appbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> links = ['About Us', 'Services', 'Projects', 'Blog', 'Contact Us'];
+    List<String> links = [
+      'About Us',
+      'Services',
+      'Projects',
+      'Blog',
+      'Contact Us'
+    ];
     return Column(
       children: [
         BaseContainer(
@@ -24,14 +30,14 @@ class Appbar extends StatelessWidget {
                   children: [
                     Image.asset(
                       'Logo.png'.icon,
-                      width: 36,
-                      height: 36,
+                      width: 56,
+                      height: 56,
                       fit: BoxFit.cover,
                       filterQuality: FilterQuality.high,
                       isAntiAlias: true,
                     ),
                     const SizedBox(width: 16),
-                    'Ventura'.poppins(
+                    'Roly Contractor'.poppins(
                       color: white,
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
