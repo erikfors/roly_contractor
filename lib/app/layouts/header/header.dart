@@ -22,14 +22,14 @@ class Header extends StatelessWidget {
       width: Metrics.width(context),
       height: 720,
       color: greenBorder,
-      child: Column(
+      child: const Column(
         children: [
-          const Appbar(),
+          Appbar(),
           Expanded(
             child: BaseContainer(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   HeaderLeft(),
                   HeaderRight(),
                 ],

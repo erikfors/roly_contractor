@@ -122,7 +122,7 @@ class HeaderLeftSubtitle extends StatelessWidget {
     final pad1 = isBigScreen ? 0.0 : normalize(min: 576, max: 976, data: Metrics.width(context));
     return Padding(
       padding: EdgeInsets.only(right: (68.0 * pad) + (120 * pad1), left: 120 * pad1),
-      child: 'Understanding the person or people living in a home is a far greater need in design.'.poppins(
+      child: 'Indulge in Professional Luxury: Perfection in Every Detail, Carefully Enriching Every Living Space.'.poppins(
         textAlign: isBigScreen ? TextAlign.left : TextAlign.center,
         fontSize: 24,
         fontWeight: FontWeight.w500,
@@ -142,7 +142,7 @@ class HeaderLeftTitle extends StatelessWidget {
     final pad1 = isBigScreen ? 0.0 : normalize(min: 576, max: 976, data: Metrics.width(context));
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 120 * pad1),
-      child: 'Bringing interiors to life'.stixTwoText(
+      child: 'Elevate Your Home, Elevate Your Lifestyle.'.stixTwoText(
         textAlign: isBigScreen ? TextAlign.left : TextAlign.center,
         fontSize: 90,
         fontWeight: FontWeight.bold,

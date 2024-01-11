@@ -66,9 +66,9 @@ class HeaderRight extends StatelessWidget {
                                   ),
                                 ),
                                 child: Center(
-                                  child: 'Ventura'.msMadi(
+                                  child: 'Roly Renovations'.msMadi(
                                     color: orange,
-                                    fontSize: 36,
+                                    fontSize: 30,
                                     height: 1.5,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -102,14 +102,14 @@ class HeaderRight extends StatelessWidget {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    'FROM'.poppins(
+                                    'SINCE'.poppins(
                                       color: Colors.grey,
                                       fontWeight: FontWeight.w600,
                                       fontSize: 16,
                                       letterSpacing: 1,
                                       height: 1.25,
                                     ),
-                                    '2001'.poppins(
+                                    '1980'.poppins(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 24,
                                       letterSpacing: 0.5,
@@ -157,7 +157,7 @@ class HeaderRight extends StatelessWidget {
                                                     color: Color(0xff30c677),
                                                   ),
                                                   const SizedBox(width: 10),
-                                                  'Trustpilot'.poppins(
+                                                  'Testimonials'.poppins(
                                                     fontSize: 20,
                                                     fontWeight: FontWeight.bold,
                                                     height: 1.5,

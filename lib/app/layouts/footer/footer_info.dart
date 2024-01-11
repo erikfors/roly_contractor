@@ -27,7 +27,7 @@ class FooterInfo extends StatelessWidget {
                   isAntiAlias: true,
                 ),
                 const SizedBox(width: 16),
-                'Ventura'.poppins(
+                'Roly Contractor'.poppins(
                   color: white,
                   fontWeight: FontWeight.bold,
                   fontSize: 24,

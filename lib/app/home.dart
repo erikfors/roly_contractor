@@ -78,7 +78,7 @@ class _HomeState extends ConsumerState<Home> {
                         ),
                         const AboutUs(),
                         const Experiences(),
-                        const Brands(),
+                        //const Brands(),
                         const CompletedProjects(),
                         const CustomDecoratives(),
                       ],

@@ -42,9 +42,9 @@ class Footer extends StatelessWidget {
                       const SizedBox(height: 240),
                       BaseContainer(
                         child: (Metrics.isDesktop(context) || Metrics.isTablet(context))
-                            ? Row(
+                            ? const Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
+                                children: [
                                   FooterInfo(),
                                   FooterSiteMap(),
                                   FooterCompany(),
@@ -52,51 +52,51 @@ class Footer extends StatelessWidget {
                                 ],
                               )
                             : Metrics.isCompact(context)
-                                ? Column(
+                                ? const Column(
                                     children: [
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: const [
+                                        children: [
                                           FooterInfo(),
                                           FooterSiteMap(),
                                         ],
                                       ),
-                                      const SizedBox(height: 36),
+                                      SizedBox(height: 36),
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: const [
+                                        children: [
                                           FooterCompany(),
                                           FooterSubscribe(),
                                         ],
                                       ),
                                     ],
                                   )
-                                : Column(
+                                : const Column(
                                     children: [
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: const [
+                                        children: [
                                           FooterInfo(),
                                         ],
                                       ),
-                                      const SizedBox(height: 24),
+                                      SizedBox(height: 24),
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: const [
+                                        children: [
                                           FooterSiteMap(),
                                         ],
                                       ),
-                                      const SizedBox(height: 24),
+                                      SizedBox(height: 24),
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: const [
+                                        children: [
                                           FooterCompany(),
                                         ],
                                       ),
-                                      const SizedBox(height: 24),
+                                      SizedBox(height: 24),
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: const [
+                                        children: [
                                           FooterSubscribe(),
                                         ],
                                       ),

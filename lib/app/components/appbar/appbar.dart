@@ -15,7 +15,6 @@ class Appbar extends StatelessWidget {
       'About Us',
       'Services',
       'Projects',
-      'Blog',
       'Contact Us'
     ];
     return Column(
@@ -30,14 +29,14 @@ class Appbar extends StatelessWidget {
                   children: [
                     Image.asset(
                       'Logo.png'.icon,
-                      width: 56,
-                      height: 56,
-                      fit: BoxFit.cover,
+                      width: 110,
+                      height: 60,
+                      fit: BoxFit.fill,
                       filterQuality: FilterQuality.high,
                       isAntiAlias: true,
                     ),
                     const SizedBox(width: 16),
-                    'Roly Contractor'.poppins(
+                    'Roly Renovations'.poppins(
                       color: white,
                       fontWeight: FontWeight.bold,
                       fontSize: 24,
@@ -64,17 +63,6 @@ class Appbar extends StatelessWidget {
                           ),
                         );
                       }),
-                    if (Metrics.isDesktop(context) || Metrics.isTablet(context))
-                      Container(
-                        height: 30,
-                        width: 3,
-                        color: white.withOpacity(0.5),
-                        margin: const EdgeInsets.symmetric(horizontal: 24),
-                      ),
-                    IconBtn(
-                      icon: FontAwesomeIcons.magnifyingGlass,
-                      onTap: () {},
-                    ),
                     if (Metrics.isMobile(context) || Metrics.isCompact(context))
                       Padding(
                         padding: const EdgeInsets.only(left: 8.0),

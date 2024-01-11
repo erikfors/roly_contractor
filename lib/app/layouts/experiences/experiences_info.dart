@@ -19,7 +19,7 @@ class ExperiencesInfo extends StatelessWidget {
       child: Column(
         crossAxisAlignment: isBigScreen ? CrossAxisAlignment.start : CrossAxisAlignment.center,
         children: [
-          'Ventura\'s'.msMadi(
+          'Roly Contractor'.msMadi(
             color: orange,
             fontSize: 52,
           ),

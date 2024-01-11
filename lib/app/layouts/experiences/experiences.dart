@@ -35,8 +35,8 @@ class Experiences extends StatelessWidget {
                 if (!isBigScreen)
                   Column(
                     children: [
-                      Row(
-                        children: const [
+                      const Row(
+                        children: [
                           ExperiencesImage(),
                         ],
                       ),
