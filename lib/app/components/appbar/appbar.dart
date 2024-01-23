@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ventura/app/home.dart';
 import 'package:ventura/app/widgets/base_container.dart';
 import 'package:ventura/app/widgets/icon_btn.dart';
 import 'package:ventura/core/core.dart';
@@ -7,7 +8,13 @@ import 'package:ventura/core/core.dart';
 class Appbar extends StatelessWidget {
   const Appbar({
     Key? key,
-  }) : super(key: key);
+    required Map<Section, GlobalKey> keys, required this.onScrollToItem,
+  })  : _keys = keys,
+        super(key: key);
+
+final Map<Section, GlobalKey> _keys;
+final Function(Section) onScrollToItem;
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +24,8 @@ class Appbar extends StatelessWidget {
       'Projects',
       'Contact Us'
     ];
+
+
     return Column(
       children: [
         BaseContainer(
@@ -53,7 +62,24 @@ class Appbar extends StatelessWidget {
                         return Padding(
                           padding: EdgeInsets.only(left: index != 0 ? 24 : 0),
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+
+                              switch(index){
+                                case 0:
+                                  onScrollToItem(Section.aboutUs); 
+                                  break;
+                                case 1:
+                                  onScrollToItem(Section.experiences); 
+                                  break;
+                                case 2:
+                                  onScrollToItem(Section.completedProjects); 
+                                  break;
+                                case 3:
+                                  onScrollToItem(Section.footer); 
+                                  break;
+                              }
+                              print(index);
+                            },
                             child: link.poppins(
                               fontWeight: FontWeight.w500,
                               color: white,

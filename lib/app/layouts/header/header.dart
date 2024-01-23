@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ventura/app/components/appbar/appbar.dart';
+import 'package:ventura/app/home.dart';
 import 'package:ventura/app/widgets/base_container.dart';
 import 'package:ventura/core/core.dart';
 
@@ -9,23 +10,24 @@ import 'header_right.dart';
 class Header extends StatelessWidget {
   const Header({
     Key? key,
-    required GlobalKey<State<StatefulWidget>> headerKey,
-  })  : _headerKey = headerKey,
+    required Map<Section, GlobalKey> keys, required this.onScrollToItem,
+  })  : _keys = keys,
         super(key: key);
 
-  final GlobalKey<State<StatefulWidget>> _headerKey;
+  final Map<Section, GlobalKey> _keys;
+   final Function(Section) onScrollToItem;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      key: _headerKey,
+      key: key,
       width: Metrics.width(context),
       height: 720,
       color: greenBorder,
-      child: const Column(
+      child:   Column(
         children: [
-          Appbar(),
-          Expanded(
+          Appbar(keys: _keys, onScrollToItem: onScrollToItem),
+          const Expanded(
             child: BaseContainer(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,

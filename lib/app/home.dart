@@ -6,6 +6,15 @@ import 'layouts/custom_decoratives/custom_decoratives.dart';
 import 'layouts/footer/footer.dart';
 import 'layouts/layouts.dart';
 
+
+enum Section {
+  header,
+  aboutUs,
+  experiences,
+  completedProjects,
+  footer,
+}
+
 class Home extends ConsumerStatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -16,10 +25,16 @@ class Home extends ConsumerStatefulWidget {
 class _HomeState extends ConsumerState<Home> {
   late ScrollController _baseController;
 
-  final GlobalKey _headerKey = GlobalKey();
+  final Map<Section, GlobalKey> sectionKeys = {
+    Section.header: GlobalKey(),
+    Section.aboutUs: GlobalKey(),
+    Section.experiences: GlobalKey(),
+    Section.completedProjects: GlobalKey(),
+    Section.footer: GlobalKey(),
+  };
 
-  Future scrollToItem(GlobalKey key) async {
-    await Scrollable.ensureVisible(key.currentContext!, duration: const Duration(milliseconds: 480));
+  void scrollToItem(Section section) {
+    Scrollable.ensureVisible(sectionKeys[section]!.currentContext!, duration: const Duration(milliseconds: 480));
   }
 
   @override
@@ -54,7 +69,7 @@ class _HomeState extends ConsumerState<Home> {
               controller: _baseController,
               child: Column(
                 children: [
-                  Header(headerKey: _headerKey),
+                  Header(keys: sectionKeys, onScrollToItem: scrollToItem,),
                   Container(
                     width: Metrics.width(context),
                     decoration: const BoxDecoration(
@@ -76,15 +91,14 @@ class _HomeState extends ConsumerState<Home> {
                           height: 2,
                           color: const Color(0xfff2e8df),
                         ),
-                        const AboutUs(),
-                        const Experiences(),
-                        //const Brands(),
-                        const CompletedProjects(),
+                         AboutUs(key: sectionKeys[Section.aboutUs]),
+                         Experiences(key: sectionKeys[Section.experiences]),
+                         CompletedProjects(key: sectionKeys[Section.completedProjects]),
                         const CustomDecoratives(),
                       ],
                     ),
                   ),
-                  const Footer(),
+                   Footer(key: sectionKeys[Section.footer]),
                 ],
               ),
             ),

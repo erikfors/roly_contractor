@@ -27,16 +27,16 @@ class FooterBottom extends StatelessWidget {
             child: SizedBox(
               height: 100,
               child: !Metrics.isMobile(context)
-                  ? Row(
+                  ? const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         FooterBottomLicence(),
                         FooterBottomSocialButtons(),
                       ],
                     )
-                  : Column(
+                  : const Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: const [
+                      children: [
                         FooterBottomSocialButtons(),
                         FooterBottomLicence(),
                       ],

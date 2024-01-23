@@ -11,12 +11,12 @@ class FooterBottomLicence extends StatelessWidget {
     return Row(
       mainAxisAlignment: Metrics.isMobile(context) ? MainAxisAlignment.center : MainAxisAlignment.start,
       children: [
-        '© 2022'.poppins(
+        '© 2024'.poppins(
           color: white,
           fontWeight: FontWeight.w600,
           height: 1.5,
         ),
-        ' Rylic Studio '.poppins(
+        ' Roly Renovations '.poppins(
           color: orange,
           fontWeight: FontWeight.w600,
           height: 1.5,
