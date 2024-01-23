@@ -11,8 +11,8 @@ class HowItWorkCardModel {
 }
 
 List<HowItWorkCardModel> cards = [
-  HowItWorkCardModel(0, FontAwesomeIcons.gift, 'Smooth Workflow', 'We provide the most easy smooth workflow of interior design.'),
-  HowItWorkCardModel(1, FontAwesomeIcons.gift, 'Qualified Designers', 'Our employees are the best of the field from city.'),
-  HowItWorkCardModel(2, FontAwesomeIcons.gift, 'High-End Design', 'We deliver the final work with great professional way.'),
-  HowItWorkCardModel(3, FontAwesomeIcons.gift, 'Trusted Platform', 'People trust us since we opened the company in USA.'),
+  HowItWorkCardModel(0, FontAwesomeIcons.clipboardCheck, 'Initial Consultation', 'Schedule a consultation to assess your renovation needs and discuss design ideas.'),
+HowItWorkCardModel(1, FontAwesomeIcons.toolbox, 'Demolition and Preparation', 'Clear the space, address structural concerns, and prepare for new installations.'),
+HowItWorkCardModel(2, FontAwesomeIcons.building, 'Construction and Implementation', 'Execute the planned renovations, coordinating skilled craftsmen for specialized tasks.'),
+HowItWorkCardModel(3, FontAwesomeIcons.paintRoller, 'Finishing Touches and Inspection', 'Apply final touches, conduct a thorough inspection, and ensure compliance with standards.'),
 ];

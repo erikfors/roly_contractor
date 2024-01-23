@@ -8,7 +8,6 @@ import 'layouts/layouts.dart';
 
 
 enum Section {
-  header,
   aboutUs,
   experiences,
   completedProjects,
@@ -26,7 +25,6 @@ class _HomeState extends ConsumerState<Home> {
   late ScrollController _baseController;
 
   final Map<Section, GlobalKey> sectionKeys = {
-    Section.header: GlobalKey(),
     Section.aboutUs: GlobalKey(),
     Section.experiences: GlobalKey(),
     Section.completedProjects: GlobalKey(),

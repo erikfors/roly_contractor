@@ -10,11 +10,11 @@ import 'header_right.dart';
 class Header extends StatelessWidget {
   const Header({
     Key? key,
-    required Map<Section, GlobalKey> keys, required this.onScrollToItem,
-  })  : _keys = keys,
+    required this.onScrollToItem,
+  })  :
         super(key: key);
 
-  final Map<Section, GlobalKey> _keys;
+
    final Function(Section) onScrollToItem;
 
   @override
@@ -26,7 +26,7 @@ class Header extends StatelessWidget {
       color: greenBorder,
       child:   Column(
         children: [
-          Appbar(keys: _keys, onScrollToItem: onScrollToItem),
+          Appbar( onScrollToItem: onScrollToItem),
           const Expanded(
             child: BaseContainer(
               child: Row(

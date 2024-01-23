@@ -8,11 +8,10 @@ import 'package:ventura/core/core.dart';
 class Appbar extends StatelessWidget {
   const Appbar({
     Key? key,
-    required Map<Section, GlobalKey> keys, required this.onScrollToItem,
-  })  : _keys = keys,
+     required this.onScrollToItem,
+  })  :
         super(key: key);
 
-final Map<Section, GlobalKey> _keys;
 final Function(Section) onScrollToItem;
 
 
