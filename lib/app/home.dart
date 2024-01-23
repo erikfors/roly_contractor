@@ -69,7 +69,7 @@ class _HomeState extends ConsumerState<Home> {
               controller: _baseController,
               child: Column(
                 children: [
-                  Header(keys: sectionKeys, onScrollToItem: scrollToItem,),
+                  Header( onScrollToItem: scrollToItem,),
                   Container(
                     width: Metrics.width(context),
                     decoration: const BoxDecoration(
