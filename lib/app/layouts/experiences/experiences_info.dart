@@ -19,11 +19,11 @@ class ExperiencesInfo extends StatelessWidget {
       child: Column(
         crossAxisAlignment: isBigScreen ? CrossAxisAlignment.start : CrossAxisAlignment.center,
         children: [
-          'Roly Contractor'.msMadi(
+          'Roly Renovations'.msMadi(
             color: orange,
             fontSize: 52,
           ),
-          'We design living spaces that are built to support your key life experience.'.stixTwoText(
+          'We craft living environments tailored to enhance your significant life moments.'.stixTwoText(
             textAlign: isBigScreen ? TextAlign.left : TextAlign.center,
             color: white,
             fontSize: 40,

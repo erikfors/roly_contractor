@@ -28,7 +28,7 @@ class AboutUsInfo extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.only(left: 192 * pad),
-                    child: 'Art & science of interior design'.stixTwoText(
+                    child: 'Art & Craft of Renovation Design'.stixTwoText(
                       textAlign: TextAlign.right,
                       fontSize: 44 + 20 * pad,
                       fontWeight: FontWeight.bold,
@@ -40,7 +40,7 @@ class AboutUsInfo extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(right: 260.0 * pad),
                     child:
-                        'The environments we live, work and play in are integral to all our lives. Like the design of products and services we provide.'
+                        'The spaces where we live, work, and play are fundamental to our daily experiences. Just like the design of the products and services we offer.'
                             .poppins(
                       fontSize: 14 + 4 * pad,
                       fontWeight: FontWeight.w500,
@@ -59,7 +59,7 @@ class AboutUsInfo extends StatelessWidget {
                     Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(left: 192 * pad),
-                        child: 'Art & science of interior design'.stixTwoText(
+                        child: 'Art & Craft of Renovation Design'.stixTwoText(
                           textAlign: TextAlign.center,
                           fontSize: 44 + 20 * pad,
                           fontWeight: FontWeight.bold,
@@ -76,7 +76,7 @@ class AboutUsInfo extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.only(right: 260.0 * pad),
                         child:
-                            'The environments we live, work and play in are integral to all our lives. Like the design of products and services we provide.'
+                            'The spaces where we live, work, and play are fundamental to our daily experiences. Just like the design of the products and services we offer.'
                                 .poppins(
                           textAlign: TextAlign.center,
                           fontSize: 14 + 4 * pad,
