@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ventura/app/home.dart';
 import 'package:ventura/app/widgets/base_container.dart';
 import 'package:ventura/core/core.dart';
 
@@ -10,9 +11,11 @@ import 'footer_sitemap.dart';
 import 'footer_subscribde.dart';
 
 class Footer extends StatelessWidget {
-  const Footer({
-    Key? key,
-  }) : super(key: key);
+  const Footer({super.key, 
+     required this.onScrollToItem,
+  });
+
+  final Function(Section) onScrollToItem;
 
   @override
   Widget build(BuildContext context) {
@@ -42,59 +45,59 @@ class Footer extends StatelessWidget {
                       const SizedBox(height: 240),
                       BaseContainer(
                         child: (Metrics.isDesktop(context) || Metrics.isTablet(context))
-                            ? const Row(
+                            ?  Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  FooterInfo(),
-                                  FooterSiteMap(),
-                                  FooterCompany(),
-                                  FooterSubscribe(),
+                                  const FooterInfo(),
+                                  FooterSiteMap( onScrollToItem: onScrollToItem),
+                                  FooterCompany( onScrollToItem: onScrollToItem),
+                                  const FooterSubscribe(),
                                 ],
                               )
                             : Metrics.isCompact(context)
-                                ? const Column(
+                                ? Column(
                                     children: [
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
-                                          FooterInfo(),
-                                          FooterSiteMap(),
+                                          const FooterInfo(),
+                                          FooterSiteMap(onScrollToItem: onScrollToItem),
                                         ],
                                       ),
-                                      SizedBox(height: 36),
-                                      Row(
+                                      const SizedBox(height: 36),
+                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
-                                          FooterCompany(),
-                                          FooterSubscribe(),
+                                          FooterCompany(onScrollToItem: onScrollToItem),
+                                          const FooterSubscribe(),
                                         ],
                                       ),
                                     ],
                                   )
-                                : const Column(
+                                :  Column(
                                     children: [
-                                      Row(
+                                      const Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           FooterInfo(),
                                         ],
                                       ),
-                                      SizedBox(height: 24),
+                                      const SizedBox(height: 24),
                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
-                                          FooterSiteMap(),
+                                          FooterSiteMap(onScrollToItem: onScrollToItem),
                                         ],
                                       ),
-                                      SizedBox(height: 24),
-                                      Row(
+                                      const SizedBox(height: 24),
+                                       Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
-                                          FooterCompany(),
+                                          FooterCompany(onScrollToItem: onScrollToItem),
                                         ],
                                       ),
-                                      SizedBox(height: 24),
-                                      Row(
+                                      const SizedBox(height: 24),
+                                      const Row(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           FooterSubscribe(),

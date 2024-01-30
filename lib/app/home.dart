@@ -12,6 +12,7 @@ enum Section {
   experiences,
   completedProjects,
   footer,
+  home
 }
 
 class Home extends ConsumerStatefulWidget {
@@ -29,6 +30,7 @@ class _HomeState extends ConsumerState<Home> {
     Section.experiences: GlobalKey(),
     Section.completedProjects: GlobalKey(),
     Section.footer: GlobalKey(),
+    Section.home: GlobalKey(),
   };
 
   void scrollToItem(Section section) {
@@ -67,7 +69,7 @@ class _HomeState extends ConsumerState<Home> {
               controller: _baseController,
               child: Column(
                 children: [
-                  Header( onScrollToItem: scrollToItem,),
+                  Header( key: sectionKeys[Section.home],onScrollToItem: scrollToItem,),
                   Container(
                     width: Metrics.width(context),
                     decoration: const BoxDecoration(
@@ -92,11 +94,12 @@ class _HomeState extends ConsumerState<Home> {
                          AboutUs(key: sectionKeys[Section.aboutUs]),
                          Experiences(key: sectionKeys[Section.experiences]),
                          CompletedProjects(key: sectionKeys[Section.completedProjects]),
-                        const CustomDecoratives(),
+                         const SizedBox(height: 250),
+                        //const CustomDecoratives(),
                       ],
                     ),
                   ),
-                   Footer(key: sectionKeys[Section.footer]),
+                   Footer(key: sectionKeys[Section.footer],onScrollToItem: scrollToItem,),
                 ],
               ),
             ),

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:ventura/app/home.dart';
 import 'package:ventura/core/core.dart';
 
 class FooterCompany extends StatelessWidget {
   const FooterCompany({
-    Key? key,
+    Key? key, required this.onScrollToItem,
   }) : super(key: key);
+
+  final Function(Section) onScrollToItem;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,7 @@ class FooterCompany extends StatelessWidget {
           SizedBox(height: 18 + 6 * pad),
           TextButton(
             onPressed: () {},
-            child: 'About'.poppins(
+            child: 'Miami, FL'.poppins(
               color: white,
               fontWeight: FontWeight.w600,
               fontSize: 14 + 2 * pad,
@@ -32,7 +35,7 @@ class FooterCompany extends StatelessWidget {
           SizedBox(height: 10 + 6 * pad),
           TextButton(
             onPressed: () {},
-            child: 'Blog'.poppins(
+            child: 'Naples, FL'.poppins(
               color: white,
               fontWeight: FontWeight.w600,
               fontSize: 14 + 2 * pad,
@@ -43,7 +46,7 @@ class FooterCompany extends StatelessWidget {
           SizedBox(height: 10 + 6 * pad),
           TextButton(
             onPressed: () {},
-            child: 'Gallery'.poppins(
+            child: 'Homestead, FL'.poppins(
               color: white,
               fontWeight: FontWeight.w600,
               fontSize: 14 + 2 * pad,
@@ -54,7 +57,7 @@ class FooterCompany extends StatelessWidget {
           SizedBox(height: 10 + 6 * pad),
           TextButton(
             onPressed: () {},
-            child: 'Careere'.poppins(
+            child: 'New York'.poppins(
               color: white,
               fontWeight: FontWeight.w600,
               fontSize: 14 + 2 * pad,

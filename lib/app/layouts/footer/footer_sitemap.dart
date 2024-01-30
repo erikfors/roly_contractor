@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:ventura/app/home.dart';
 import 'package:ventura/core/core.dart';
 
 class FooterSiteMap extends StatelessWidget {
   const FooterSiteMap({
-    Key? key,
+    Key? key, required this.onScrollToItem,
   }) : super(key: key);
+
+  final Function(Section) onScrollToItem;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +23,7 @@ class FooterSiteMap extends StatelessWidget {
           ),
           SizedBox(height: 18 + 6 * pad),
           TextButton(
-            onPressed: () {},
+            onPressed: () {onScrollToItem(Section.home);},
             child: 'Home'.poppins(
               color: white,
               fontWeight: FontWeight.w600,
@@ -31,8 +34,8 @@ class FooterSiteMap extends StatelessWidget {
           ),
           SizedBox(height: 10 + 6 * pad),
           TextButton(
-            onPressed: () {},
-            child: 'Pages'.poppins(
+            onPressed: () {onScrollToItem(Section.experiences);},
+            child: 'Experience'.poppins(
               color: white,
               fontWeight: FontWeight.w600,
               fontSize: 14 + 2 * pad,
@@ -42,19 +45,19 @@ class FooterSiteMap extends StatelessWidget {
           ),
           SizedBox(height: 10 + 6 * pad),
           TextButton(
-            onPressed: () {},
+            onPressed: () {onScrollToItem(Section.aboutUs);},
+            child: 'About Us'.poppins(
+              color: white,
+              fontWeight: FontWeight.w600,
+              fontSize: 14 + 2 * pad,
+              height: 1.5,
+              letterSpacing: 0.5,
+            ),
+          ),
+          SizedBox(height: 10 + 6 * pad),
+          TextButton(
+            onPressed: () {onScrollToItem(Section.completedProjects);},
             child: 'Projects'.poppins(
-              color: white,
-              fontWeight: FontWeight.w600,
-              fontSize: 14 + 2 * pad,
-              height: 1.5,
-              letterSpacing: 0.5,
-            ),
-          ),
-          SizedBox(height: 10 + 6 * pad),
-          TextButton(
-            onPressed: () {},
-            child: 'Shop'.poppins(
               color: white,
               fontWeight: FontWeight.w600,
               fontSize: 14 + 2 * pad,
