@@ -65,18 +65,18 @@ class CompletedProjectDetailView extends StatelessWidget {
                   children: [
                     const SizedBox(width: 16),
                     '+1 (914) 661-8390'.poppins(
-              color: white,
-              fontWeight: FontWeight.w500,
-              fontSize: 14 + 4 * pad1,
-              height: 1.5,
-            ),
+                      color: white,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14 + 4 * pad1,
+                      height: 1.5,
+                    ),
                     const SizedBox(width: 16),
                     'roly@gmail.com'.poppins(
-              color: white,
-              fontWeight: FontWeight.w500,
-              fontSize: 14 + 4 * pad1,
-              height: 1.5,
-            ),
+                      color: white,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14 + 4 * pad1,
+                      height: 1.5,
+                    ),
                   ],
                 ),
               ),
@@ -84,27 +84,55 @@ class CompletedProjectDetailView extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            project.title.poppins(
-              fontSize: 24 + 6 * pad1,
-              fontWeight: FontWeight.bold,
-              height: 1.5,
-            ),
+            if (!Metrics.isMobile(context))
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                   project.title.stixTwoText(
+                    fontSize: 32 + 16 * pad1,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ],
+              ),
+            if (Metrics.isMobile(context))
+              Column(
+                children: [
+                   project.title.stixTwoText(
+                    fontSize: 32 + 16 * pad1,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ],
+              ),
             const SizedBox(height: 8),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(
-                  FontAwesomeIcons.mapPin,
-                  color: orange,
-                  size: 18,
-                ),
-                const SizedBox(width: 10),
-                project.location.poppins(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  height: 1.5,
-                ),
-              ],
+            Container(
+              width: 150,
+              decoration: BoxDecoration(
+                color: white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.15),
+                    offset: const Offset(0, 3),
+                    blurRadius: 6,
+                  )
+                ],
+              ),
+              padding: const EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    FontAwesomeIcons.mapPin,
+                    color: orange,
+                    size: 18,
+                  ),
+                  const SizedBox(width: 10),
+                  project.location.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    height: 1.5,
+                  ),
+                ],
+              ),
             ),
             const SizedBox(
               height: 16,
@@ -229,23 +257,14 @@ class CompletedProjectDetailView extends StatelessWidget {
               color: Colors.grey.withOpacity(0.5),
             ),
             const SizedBox(height: 32),
-            if (!Metrics.isMobile(context))
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  'Pictures of the project:'.stixTwoText(
-                    fontSize: 32 + 16 * pad1,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ],
-              ),
-            if (Metrics.isMobile(context))
-              Column(
-                children: [
-                  'Pictures of the project:'.stixTwoText(
-                    fontSize: 32 + 16 * pad1,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  'Pictures of the project:'.poppins(
+              fontSize: 24 + 6 * pad1,
+              fontWeight: FontWeight.bold,
+              height: 1.5,
+            ),
                 ],
               ),
             const SizedBox(height: 16),
