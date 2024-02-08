@@ -23,6 +23,67 @@ class CompletedProjectDetailView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Container(
+              width: Metrics.width(context),
+              color: greenBorder,
+              child: SizedBox(
+                height: 100,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'Logo.png'.icon,
+                      width: 110,
+                      height: 60,
+                      fit: BoxFit.fill,
+                      filterQuality: FilterQuality.high,
+                      isAntiAlias: true,
+                    ),
+                    const SizedBox(width: 16),
+                    'Roly Renovations'.poppins(
+                      color: white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      height: 1.5,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              width: Metrics.width(context),
+              height: 1,
+              color: greenlight,
+            ),
+            Container(
+              width: Metrics.width(context),
+              color: greenBorder,
+              child: SizedBox(
+                height: 50,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const SizedBox(width: 16),
+                    '+1 (914) 661-8390'.poppins(
+              color: white,
+              fontWeight: FontWeight.w500,
+              fontSize: 14 + 4 * pad1,
+              height: 1.5,
+            ),
+                    const SizedBox(width: 16),
+                    'roly@gmail.com'.poppins(
+              color: white,
+              fontWeight: FontWeight.w500,
+              fontSize: 14 + 4 * pad1,
+              height: 1.5,
+            ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
             project.title.poppins(
               fontSize: 24 + 6 * pad1,
               fontWeight: FontWeight.bold,
@@ -160,11 +221,34 @@ class CompletedProjectDetailView extends StatelessWidget {
                 ),
               ],
             ),
-            const Text(
-              'Pictures of the project:',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            const SizedBox(height: 32),
+            //make a line
+            Container(
+              width: double.infinity,
+              height: 1,
+              color: Colors.grey.withOpacity(0.5),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 32),
+            if (!Metrics.isMobile(context))
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  'Pictures of the project:'.stixTwoText(
+                    fontSize: 32 + 16 * pad1,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ],
+              ),
+            if (Metrics.isMobile(context))
+              Column(
+                children: [
+                  'Pictures of the project:'.stixTwoText(
+                    fontSize: 32 + 16 * pad1,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ],
+              ),
+            const SizedBox(height: 16),
             Wrap(
               spacing: 8.0,
               runSpacing: 8.0,
@@ -183,12 +267,11 @@ class CompletedProjectDetailView extends StatelessWidget {
             ),
             Container(
               width: Metrics.width(context),
-              height:
-                  (Metrics.isDesktop(context) || Metrics.isTablet(context))
-                      ? 644
-                      : Metrics.isCompact(context)
-                          ? (644 + 130)
-                          : (644 + 130 + 321),
+              height: (Metrics.isDesktop(context) || Metrics.isTablet(context))
+                  ? 644
+                  : Metrics.isCompact(context)
+                      ? (644 + 130)
+                      : (644 + 130 + 321),
               color: greenBg,
               child: Stack(
                 clipBehavior: Clip.none,

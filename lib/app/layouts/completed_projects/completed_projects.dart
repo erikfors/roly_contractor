@@ -49,10 +49,10 @@ class _CompletedProjectsState extends State<CompletedProjects> {
             },
           ),
           if (_visibleProjectsCount < completedProjects.length)
-            const SizedBox(height: 36),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(height: 80 * pad),
                 Material(
                   color: greenBorder,
                   child: InkWell(
