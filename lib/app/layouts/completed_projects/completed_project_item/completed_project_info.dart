@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ventura/app/pages/completedProjectDetailView.dart';
 import 'package:ventura/core/core.dart';
 
 class CompletedProjectInfo extends StatelessWidget {
@@ -135,7 +136,14 @@ class CompletedProjectInfo extends StatelessWidget {
                 Material(
                   color: greenBorder,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () {
+                            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CompletedProjectDetailView(project: item),
+                ),
+              );
+                    },
                     child: Padding(
                       padding: const EdgeInsets.all(16),
                       child: Row(

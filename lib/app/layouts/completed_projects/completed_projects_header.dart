@@ -28,37 +28,11 @@ class CompletedProjectsHeader extends StatelessWidget {
         const SizedBox(height: 16),
         if (!Metrics.isMobile(context))
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               'Projects we\'ve done'.stixTwoText(
                 fontSize: 32 + 16 * pad,
                 fontWeight: FontWeight.bold,
-              ),
-              Material(
-                color: Colors.transparent,
-                shape: const RoundedRectangleBorder(
-                  side: BorderSide(color: greenBorder, width: 2),
-                ),
-                child: InkWell(
-                  onTap: () {},
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Row(
-                      children: [
-                        'See all projects'.poppins(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        const SizedBox(width: 12),
-                        const Icon(
-                          FontAwesomeIcons.chevronRight,
-                          color: textPrimary,
-                          size: 16,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
               ),
             ],
           ),
@@ -68,38 +42,6 @@ class CompletedProjectsHeader extends StatelessWidget {
               'Projects we\'ve done'.stixTwoText(
                 fontSize: 32 + 16 * pad,
                 fontWeight: FontWeight.bold,
-              ),
-              const SizedBox(height: 24),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Material(
-                    color: Colors.transparent,
-                    shape: const RoundedRectangleBorder(
-                      side: BorderSide(color: greenBorder, width: 2),
-                    ),
-                    child: InkWell(
-                      onTap: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: Row(
-                          children: [
-                            'See all projects'.poppins(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                            ),
-                            const SizedBox(width: 12),
-                            const Icon(
-                              FontAwesomeIcons.chevronRight,
-                              color: textPrimary,
-                              size: 16,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
               ),
             ],
           ),

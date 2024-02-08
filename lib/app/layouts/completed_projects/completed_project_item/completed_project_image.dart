@@ -32,7 +32,7 @@ class CompletedProjectImage extends StatelessWidget {
                       topLeft: Radius.circular(52),
                     ),
                     child: Image.network(
-                      item.imgPath,
+                      item.imgPaths[0],
                       fit: BoxFit.cover,
                       height: 320,
                     ),
