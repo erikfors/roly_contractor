@@ -77,7 +77,6 @@ final Function(Section) onScrollToItem;
                                   onScrollToItem(Section.footer); 
                                   break;
                               }
-                              print(index);
                             },
                             child: link.poppins(
                               fontWeight: FontWeight.w500,

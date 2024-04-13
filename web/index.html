@@ -48,7 +48,8 @@
           serviceWorkerVersion: serviceWorkerVersion,
         }
       }).then(function(engineInitializer) {
-        return engineInitializer.initializeEngine();
+        let config = { renderer: 'html' };
+        return engineInitializer.initializeEngine(config);
       }).then(function(appRunner) {
         return appRunner.runApp();
       });

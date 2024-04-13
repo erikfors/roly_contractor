@@ -32,7 +32,7 @@ class FooterInfo extends StatelessWidget {
               height: 1.5,
             ),
             SizedBox(height: 16 + 8 * pad),
-            'roly@gmail.com'.poppins(
+            'rolycapote@gmail.com'.poppins(
               color: white,
               fontWeight: FontWeight.w500,
               fontSize: 14 + 4 * pad,

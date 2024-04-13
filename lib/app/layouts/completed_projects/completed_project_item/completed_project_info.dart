@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,7 +14,6 @@ class CompletedProjectInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pad = normalize(min: 976, max: 1440, data: Metrics.width(context));
     final pad1 = normalize(min: 576, max: 976, data: Metrics.width(context));
 
     return Expanded(
@@ -107,22 +105,11 @@ class CompletedProjectInfo extends StatelessWidget {
                             height: 1.5,
                             color: Colors.grey,
                           ),
-                          Row(
-                            children: [
-                              item.size.poppins(
-                                fontSize: 16 + 4 * pad1,
-                                fontWeight: FontWeight.w600,
-                                height: 1.5,
-                                color: greenBg,
-                              ),
-                              '2'.poppins(
-                                fontSize: 16 + 4 * pad1,
-                                fontWeight: FontWeight.w600,
-                                height: 1.5,
-                                color: greenBg,
-                                fontFeatures: [const FontFeature.superscripts()],
-                              ),
-                            ],
+                          item.size.poppins(
+                            fontSize: 16 + 4 * pad1,
+                            fontWeight: FontWeight.w600,
+                            height: 1.5,
+                            color: greenBg,
                           ),
                         ],
                       ),

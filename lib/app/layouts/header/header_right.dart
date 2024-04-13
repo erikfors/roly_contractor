@@ -10,7 +10,8 @@ class HeaderRight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isBigScreen = Metrics.isDesktop(context) || Metrics.isTablet(context);
+    final bool isBigScreen =
+        Metrics.isDesktop(context) || Metrics.isTablet(context);
     final pad = normalize(min: 976, max: 1440, data: Metrics.width(context));
 
     return isBigScreen
@@ -26,10 +27,24 @@ class HeaderRight extends StatelessWidget {
                   child: AspectRatio(
                     aspectRatio: 4 / 3,
                     child: ClipRRect(
-                      borderRadius: const BorderRadius.only(topLeft: Radius.circular(64)),
+                      borderRadius:
+                          const BorderRadius.only(topLeft: Radius.circular(64)),
                       child: Image.network(
-                        'https://images.unsplash.com/photo-1613252036716-e1efc9788e5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+                        'https://firebasestorage.googleapis.com/v0/b/roly-website.appspot.com/o/AlonePictures%2Fstairs.jpg?alt=media',
                         fit: BoxFit.cover,
+                        loadingBuilder: (context, child, loadingProgress) {
+                          if (loadingProgress == null) {
+                            return child;
+                          }
+                          return Center(
+                            child: CircularProgressIndicator(
+                              value: loadingProgress.expectedTotalBytes != null
+                                  ? loadingProgress.cumulativeBytesLoaded /
+                                      loadingProgress.expectedTotalBytes!
+                                  : null,
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ),
@@ -109,7 +124,7 @@ class HeaderRight extends StatelessWidget {
                                       letterSpacing: 1,
                                       height: 1.25,
                                     ),
-                                    '1980'.poppins(
+                                    '1999'.poppins(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 24,
                                       letterSpacing: 0.5,
@@ -148,7 +163,8 @@ class HeaderRight extends StatelessWidget {
                                       child: Column(
                                         children: [
                                           Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Row(
                                                 children: [
@@ -164,7 +180,7 @@ class HeaderRight extends StatelessWidget {
                                                   ),
                                                 ],
                                               ),
-                                              '4.9/5'.poppins(
+                                              '5/5'.poppins(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 18,
                                                 height: 1.5,
@@ -175,16 +191,21 @@ class HeaderRight extends StatelessWidget {
                                           Row(
                                             children: [
                                               RatingBar.builder(
-                                                initialRating: 4.5,
+                                                initialRating: 5.0,
                                                 minRating: 1,
                                                 direction: Axis.horizontal,
                                                 allowHalfRating: true,
                                                 itemCount: 5,
                                                 itemSize: 36,
-                                                itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
-                                                unratedColor: Colors.grey.withOpacity(0.5),
-                                                wrapAlignment: WrapAlignment.start,
-                                                itemBuilder: (context, _) => const Icon(
+                                                itemPadding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 4.0),
+                                                unratedColor: Colors.grey
+                                                    .withOpacity(0.5),
+                                                wrapAlignment:
+                                                    WrapAlignment.start,
+                                                itemBuilder: (context, _) =>
+                                                    const Icon(
                                                   Icons.star,
                                                   color: Colors.amber,
                                                 ),

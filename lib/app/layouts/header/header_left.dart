@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ventura/core/core.dart';
 
 class HeaderLeft extends StatelessWidget {
@@ -11,11 +11,13 @@ class HeaderLeft extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final pad = normalize(min: 976, max: 1440, data: Metrics.width(context));
-    final bool isBigScreen = Metrics.isDesktop(context) || Metrics.isTablet(context);
+    final bool isBigScreen =
+        Metrics.isDesktop(context) || Metrics.isTablet(context);
 
     return Expanded(
       child: Column(
-        crossAxisAlignment: isBigScreen ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+        crossAxisAlignment:
+            isBigScreen ? CrossAxisAlignment.start : CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           HeaderLeftTitle(isBigScreen: isBigScreen),
@@ -39,12 +41,16 @@ class HeaderLeftInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isBigScreen = Metrics.isDesktop(context) || Metrics.isTablet(context);
-    final pad1 = isBigScreen ? 0.0 : normalize(min: 576, max: 976, data: Metrics.width(context));
+    final bool isBigScreen =
+        Metrics.isDesktop(context) || Metrics.isTablet(context);
+    final pad1 = isBigScreen
+        ? 0.0
+        : normalize(min: 576, max: 976, data: Metrics.width(context));
 
     return Container(
       height: 72,
-      margin: EdgeInsets.only(right: (72 * pad) + (120 * pad1), left: 120 * pad1),
+      margin:
+          EdgeInsets.only(right: (72 * pad) + (120 * pad1), left: 120 * pad1),
       padding: const EdgeInsets.all(8),
       decoration: const BoxDecoration(
         color: white,
@@ -54,48 +60,39 @@ class HeaderLeftInput extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.only(left: 16.0),
-              child: TextField(
+              child: Text(
+                '(914) 661-8390', // Display the phone number
                 style: GoogleFonts.poppins(
                   fontSize: 16,
                   color: textPrimary,
                   fontWeight: FontWeight.bold,
                   height: 1.30,
                 ),
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Type your email',
-                  hintStyle: GoogleFonts.poppins(
-                    color: greenBg,
-                  ),
-                ),
               ),
             ),
           ),
           Material(
             color: orange,
-            child: InkWell(
-              onTap: () {},
-              child: SizedBox(
-                height: 72 - 16,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 32),
-                  child: Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        'Get a quote'.poppins(
-                          color: white,
-                          height: 1.75,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        const SizedBox(width: 10),
-                        const Icon(
-                          FontAwesomeIcons.chevronRight,
-                          color: white,
-                          size: 12,
-                        )
-                      ],
-                    ),
+            child: SizedBox(
+              height: 72 - 16,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      'Get a quote'.poppins(
+                        color: white,
+                        height: 1.75,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      const SizedBox(width: 10),
+                      const Icon(
+                        FontAwesomeIcons.chevronRight,
+                        color: white,
+                        size: 12,
+                      )
+                    ],
                   ),
                 ),
               ),
@@ -119,10 +116,15 @@ class HeaderLeftSubtitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pad1 = isBigScreen ? 0.0 : normalize(min: 576, max: 976, data: Metrics.width(context));
+    final pad1 = isBigScreen
+        ? 0.0
+        : normalize(min: 576, max: 976, data: Metrics.width(context));
     return Padding(
-      padding: EdgeInsets.only(right: (68.0 * pad) + (120 * pad1), left: 120 * pad1),
-      child: 'Indulge in Professional Luxury: Perfection in Every Detail, Carefully Enriching Every Living Space.'.poppins(
+      padding:
+          EdgeInsets.only(right: (68.0 * pad) + (120 * pad1), left: 120 * pad1),
+      child:
+          'Indulge in Professional Luxury: Perfection in Every Detail, Carefully Enriching Every Living Space.'
+              .poppins(
         textAlign: isBigScreen ? TextAlign.left : TextAlign.center,
         fontSize: 24,
         fontWeight: FontWeight.w500,
@@ -134,12 +136,15 @@ class HeaderLeftSubtitle extends StatelessWidget {
 }
 
 class HeaderLeftTitle extends StatelessWidget {
-  const HeaderLeftTitle({Key? key, required this.isBigScreen}) : super(key: key);
+  const HeaderLeftTitle({Key? key, required this.isBigScreen})
+      : super(key: key);
   final bool isBigScreen;
 
   @override
   Widget build(BuildContext context) {
-    final pad1 = isBigScreen ? 0.0 : normalize(min: 576, max: 976, data: Metrics.width(context));
+    final pad1 = isBigScreen
+        ? 0.0
+        : normalize(min: 576, max: 976, data: Metrics.width(context));
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 120 * pad1),
       child: 'Elevate Your Home, Elevate Your Lifestyle.'.stixTwoText(

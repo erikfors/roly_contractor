@@ -33,9 +33,9 @@ class ExperiencesInfo extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ExperiencesInfoItem(pad: pad, count: '10', title: 'Years of experiences'),
-              ExperiencesInfoItem(pad: pad, count: '220+', title: 'Completed Projects'),
-              ExperiencesInfoItem(pad: pad, count: '4.5', title: 'Overall Ratings'),
+              ExperiencesInfoItem(pad: pad, count: '20+', title: 'Years of experiences'),
+              ExperiencesInfoItem(pad: pad, count: '100+', title: 'Completed Projects'),
+              ExperiencesInfoItem(pad: pad, count: '5.0', title: 'Overall Ratings'),
             ],
           ),
         ],

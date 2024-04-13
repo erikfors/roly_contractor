@@ -22,7 +22,8 @@ class FooterSubscribe extends StatelessWidget {
             fontSize: 18 + 6 * pad,
           ),
           SizedBox(height: 18 + 6 * pad),
-          'Leave your email and we will contact you as soon as possible'.poppins(
+          'Contact us today!'
+              .poppins(
             color: white,
             fontWeight: FontWeight.w600,
             fontSize: 13 + 3 * pad,
@@ -41,46 +42,37 @@ class FooterSubscribe extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(left: 16.0),
-                    child: TextField(
+                    child: Text(
+                      '(914) 661-8390', // Display the phone number
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         color: textPrimary,
                         fontWeight: FontWeight.bold,
                         height: 1.30,
                       ),
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Type your email',
-                        hintStyle: GoogleFonts.poppins(
-                          color: greenBg,
-                        ),
-                      ),
                     ),
                   ),
                 ),
                 Material(
                   color: orange,
-                  child: InkWell(
-                    onTap: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            'Get a quote'.poppins(
-                              color: white,
-                              height: 1.75,
-                              fontWeight: FontWeight.w500,
-                            ),
-                            const SizedBox(width: 10),
-                            const Icon(
-                              FontAwesomeIcons.chevronRight,
-                              color: white,
-                              size: 12,
-                            )
-                          ],
-                        ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          'Get a quote'.poppins(
+                            color: white,
+                            height: 1.75,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          const SizedBox(width: 10),
+                          const Icon(
+                            FontAwesomeIcons.chevronRight,
+                            color: white,
+                            size: 12,
+                          )
+                        ],
                       ),
                     ),
                   ),

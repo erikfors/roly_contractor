@@ -17,7 +17,7 @@ class ExperiencesImage extends StatelessWidget {
             AspectRatio(
               aspectRatio: 1,
               child: Image.network(
-                'https://images.unsplash.com/photo-1611967164521-abae8fba4668?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+                'https://firebasestorage.googleapis.com/v0/b/roly-website.appspot.com/o/AlonePictures%2Ffloor.jpg?alt=media&format&fit=crop&w=870&q=80',
                 fit: BoxFit.cover,
               ),
             ),

@@ -12,11 +12,11 @@ class AboutUsImageSlider extends StatefulWidget {
 
 class _AboutUsImageSliderState extends State<AboutUsImageSlider> {
   List<String> images = [
-    'https://images.unsplash.com/photo-1579656592043-a20e25a4aa4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
-    'https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80',
-    'https://images.unsplash.com/photo-1551298370-9d3d53740c72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
-    'https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
-    'https://images.unsplash.com/photo-1540638349517-3abd5afc5847?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+    'https://firebasestorage.googleapis.com/v0/b/roly-website.appspot.com/o/AlonePictures%2Ffivepictures%2Fhouse.jpg?alt=media&format&fit=crop&w=774&q=80',
+    'https://firebasestorage.googleapis.com/v0/b/roly-website.appspot.com/o/AlonePictures%2Ffivepictures%2Fcocina.jpg?alt=media&format&fit=crop&w=774&q=80',
+    'https://firebasestorage.googleapis.com/v0/b/roly-website.appspot.com/o/AlonePictures%2Ffivepictures%2Fbathroom.jpg?alt=media&format&fit=crop&w=774&q=80',
+    'https://firebasestorage.googleapis.com/v0/b/roly-website.appspot.com/o/AlonePictures%2Ffivepictures%2Fstairs.jpg?alt=media&format&fit=crop&w=774&q=80',
+    'https://firebasestorage.googleapis.com/v0/b/roly-website.appspot.com/o/AlonePictures%2Ffivepictures%2Ffloor.jpg?alt=media&format&fit=crop&w=774&q=80',
   ];
   late PageController _controller;
   int currentPage = 0;

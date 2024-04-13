@@ -5,7 +5,6 @@ import 'package:ventura/app/widgets/base_container.dart';
 import 'package:ventura/core/core.dart';
 import 'completed_project_item/completed_project_item.dart';
 import 'completed_projects_header.dart';
-import 'completed_projects_tabs.dart';
 
 class CompletedProjects extends StatefulWidget {
   const CompletedProjects({

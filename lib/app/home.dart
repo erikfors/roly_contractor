@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ventura/core/core.dart';
 
-import 'layouts/custom_decoratives/custom_decoratives.dart';
 import 'layouts/footer/footer.dart';
 import 'layouts/layouts.dart';
 

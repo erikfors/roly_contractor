@@ -20,7 +20,6 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      key: key,
       width: Metrics.width(context),
       height: 720,
       color: greenBorder,

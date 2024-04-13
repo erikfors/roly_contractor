@@ -19,7 +19,6 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pad = normalize(min: 976, max: 1440, data: Metrics.width(context));
 
     return Container(
       width: Metrics.width(context),
